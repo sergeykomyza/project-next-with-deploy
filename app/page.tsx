@@ -1,8 +1,6 @@
 import Image from "next/image";
-import { PrismaClient } from "@prisma/client";
+import { prisma } from "@/lib/prisma";
 import type { Product } from "@prisma/client";
-
-const prisma = new PrismaClient()
 
 export default async function Home() {
   const products: Product[] = await prisma.product.findMany()
