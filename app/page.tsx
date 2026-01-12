@@ -1,10 +1,10 @@
 import Image from "next/image";
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient, Product } from "@prisma/client";
 
 const prisma = new PrismaClient
 
 export default async function Home() {
-  const products = await prisma.product.findMany()
+  const products: Product[] = await prisma.product.findMany()
   console.log(products)
   return (
     <section>
