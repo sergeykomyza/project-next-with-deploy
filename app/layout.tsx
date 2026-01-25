@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Roboto } from "next/font/google";
-import "./globals.css";
+import "./globals.scss";
+import { SidebarMenu } from "./features/SidebarMenu/SidebarMenu";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,6 +38,7 @@ export default function RootLayout({
           antialiased
         `}
       >
+        <SidebarMenu />
         {children}
       </body>
     </html>
