@@ -6,7 +6,7 @@ import Noise from '@/app/components/Noise/Noise';
 
 export const SidebarMenu: React.FC = () => {
   return (
-    <aside className={styles.sidebar}>
+    <header className={styles.sidebar}>
       <Noise
         patternSize={250}
         patternScaleX={2}
@@ -19,6 +19,14 @@ export const SidebarMenu: React.FC = () => {
           <Image className={styles.logo} src="/img/logo.png" alt="logo" width={100} height={100} />
         </Link>
       </Magnet>
-    </aside>
+      <ul className={styles.menu}>
+        <li>
+          <Link className={styles.menuLink} href="/">Главная</Link>
+        </li>
+        <li>
+          <Link className={styles.menuLink} href="/about">О нас</Link>
+        </li>
+      </ul>
+    </header>
   )
 }
