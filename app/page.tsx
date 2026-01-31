@@ -1,3 +1,5 @@
+
+
 import Image from "next/image";
 import { prisma } from "@/lib/prisma";
 import type { Product } from "@prisma/client";
